@@ -85,8 +85,8 @@
   <name>EP RFN FAQ</name>
   <description>This is the custom module (EP RFN FAQ) for running on a Digital Factory server.</description>
   <scm>
-    <connection>scm:dummy:uri</connection>
-    <developerConnection>scm:dummy:uri</developerConnection>
+    <connection>scm:git:git@github.com:odambrosio/ep-rfn-faq.git</connection>
+    <developerConnection>scm:git:git@github.com:odambrosio/ep-rfn-faq.git</developerConnection>
   </scm>
   <repositories>
     <repository>
