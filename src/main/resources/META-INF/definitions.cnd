@@ -1,0 +1,41 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+<rfnmix = 'http://www.rfnmix.jahia.ep.europa.eu'>
+<rfnnt = 'http://www.rfnnt.jahia.ep.europa.eu'>
+
+[rfnnt:epRfnFaq] > rfnnt:epRfnContent, jmix:categorized, jmix:editorialContent, mix:title, rfnmix:epRfnBreadcrumbEnabled, rfnmix:epRfnComponent, rfnmix:epRfnMenuItem
+ - description (string, richtext) mandatory internationalized
+ - summary (string, richtext) mandatory internationalized
+ - responsible1 (weakreference, picker[type='rfnnt:epRfnContact'])
+ - responsible2 (weakreference, picker[type='rfnnt:epRfnContact'])
+ + * (rfnnt:epRfnFormFile, rfnnt:epRfnFormUrl, rfnnt:epRfnMultimediaElement, rfnnt:epRfnReferenceDocumentFile, rfnnt:epRfnReferenceDocumentUrl)
+
+[rfnnt:epRfnFaqSearchResults] > jnt:searchResults
+
+[rfnnt:epRfnFaqSearchForm] > jnt:customSearchForm
+ - nodeType (string, choicelist[nodetypes='rfnnt:epRfnFaq']) internationalized indexed=no
+
+[rfnnt:epRfnFaqSearchTab] > rfnnt:epRfnContent, jmix:studioOnly, rfnmix:epRfnComponent
+
+[rfnnt:epRfnFaqSearchHelpPanel] > rfnnt:epRfnContent, rfnmix:epRfnComponent
+ - firstText (string, textarea) internationalized indexed=no
+ - firstListElement (string) internationalized indexed=no
+ - secondListElement (string) internationalized indexed=no
+ - thirdListElement (string) internationalized indexed=no
+ - fourthListElement (string) internationalized indexed=no
+ - fifthListElement (string) internationalized indexed=no
+ - lastText (string, textarea) internationalized indexed=no
+
+[rfnnt:epRfnFaqConfig] > rfnnt:epRfnContent, jmix:editorialContent, rfnmix:epRfnComponent
+ - popularTermsTitle (string) internationalized
+ - popularTermsList (string) internationalized
+ - contactFormTitle (string) internationalized
+ - contactFormDescTitle (string) internationalized
+ - contactFormMailAddress (string)
+ - contactFormMailSubject (string) internationalized
+ - contactFormMailBody (string, textarea) internationalized
+
+[rfnnt:epRfnFaqFolder] > jnt:folder, jmix:editorialContent, rfnmix:epRfnComponent
+ + * (rfnnt:epRfnFaq)
+
