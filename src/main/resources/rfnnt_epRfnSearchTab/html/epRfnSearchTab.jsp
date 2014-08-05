@@ -14,6 +14,14 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
 <ul class="nav nav-tabs nav-tabs-search">
-  <li class="active"><a data-toggle="tab" href="#search-panel">Search</a></li>
-  <li><a data-toggle="tab" href="#categories">Categories</a></li>
+  <li class="active">
+    <a data-toggle="tab" href="#search-panel">
+    	<fmt:message key="faq.search.tab.search"/>
+    </a>
+  </li>
+  <li>
+    <a data-toggle="tab" href="#categories">
+      <fmt:message key="faq.search.tab.categories"/>
+    </a>
+  </li>
 </ul>

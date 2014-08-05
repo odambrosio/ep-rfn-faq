@@ -4,21 +4,22 @@
 <rfnmix = 'http://www.rfnmix.jahia.ep.europa.eu'>
 <rfnnt = 'http://www.rfnnt.jahia.ep.europa.eu'>
 
-[rfnnt:epRfnFaq] > rfnnt:epRfnContent, jmix:categorized, jmix:editorialContent, mix:title, rfnmix:epRfnBreadcrumbEnabled, rfnmix:epRfnComponent, rfnmix:epRfnMenuItem
+[rfnnt:epRfnFaq] > jnt:content, jmix:editorialContent, mix:title, rfnmix:epRfnBreadcrumbEnabled, rfnmix:epRfnComponent, rfnmix:epRfnMenuItem
+ - filter (weakreference, choicelist[nodes='/sites/systemsite/categories/faq_filters//*;jnt:category']) multiple
  - description (string, richtext) mandatory internationalized
  - summary (string, richtext) mandatory internationalized
- - responsible1 (weakreference, picker[type='rfnnt:epRfnContact'])
- - responsible2 (weakreference, picker[type='rfnnt:epRfnContact'])
- + * (rfnnt:epRfnFormFile, rfnnt:epRfnFormUrl, rfnnt:epRfnMultimediaElement, rfnnt:epRfnReferenceDocumentFile, rfnnt:epRfnReferenceDocumentUrl)
+ - responsible1 (weakreference, picker[type='contact'])
+ - responsible2 (weakreference, picker[type='contact'])
+ + * (rfnnt:epRfnFormFile, rfnnt:epRfnFormUrl, rfnnt:epRfnMultimediaElement, rfnnt:epRfnReferenceDocumentFile, rfnnt:epRfnReferenceDocumentUrl, rfnnt:epRfnLink)
 
 [rfnnt:epRfnFaqSearchResults] > jnt:searchResults
 
 [rfnnt:epRfnFaqSearchForm] > jnt:customSearchForm
  - nodeType (string, choicelist[nodetypes='rfnnt:epRfnFaq']) internationalized indexed=no
 
-[rfnnt:epRfnFaqSearchTab] > rfnnt:epRfnContent, jmix:studioOnly, rfnmix:epRfnComponent
+[rfnnt:epRfnFaqSearchTab] > jnt:content, jmix:studioOnly, rfnmix:epRfnComponent
 
-[rfnnt:epRfnFaqSearchHelpPanel] > rfnnt:epRfnContent, rfnmix:epRfnComponent
+[rfnnt:epRfnFaqSearchHelpPanel] > jnt:content, rfnmix:epRfnComponent
  - firstText (string, textarea) internationalized indexed=no
  - firstListElement (string) internationalized indexed=no
  - secondListElement (string) internationalized indexed=no
@@ -27,7 +28,7 @@
  - fifthListElement (string) internationalized indexed=no
  - lastText (string, textarea) internationalized indexed=no
 
-[rfnnt:epRfnFaqConfig] > rfnnt:epRfnContent, jmix:editorialContent, rfnmix:epRfnComponent
+[rfnnt:epRfnFaqConfig] > jnt:content, jmix:editorialContent, rfnmix:epRfnComponent
  - popularTermsTitle (string) internationalized
  - popularTermsList (string) internationalized
  - contactFormTitle (string) internationalized
@@ -35,7 +36,4 @@
  - contactFormMailAddress (string)
  - contactFormMailSubject (string) internationalized
  - contactFormMailBody (string, textarea) internationalized
-
-[rfnnt:epRfnFaqFolder] > jnt:folder, jmix:editorialContent, rfnmix:epRfnComponent
- + * (rfnnt:epRfnFaq)
 
