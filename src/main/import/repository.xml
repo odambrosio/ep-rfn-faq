@@ -23,7 +23,7 @@
                                  jcr:primaryType="jnt:translation"
                                  jcr:title="FAQ details"/>
                         <pagecontent jcr:primaryType="jnt:contentList">
-                            <main-resource-display-faq j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                            <faq-main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
                         </pagecontent>
                     </faq-details>
                 </templates>

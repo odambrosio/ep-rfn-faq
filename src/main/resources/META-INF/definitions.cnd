@@ -4,7 +4,7 @@
 <rfnmix = 'http://www.rfnmix.jahia.ep.europa.eu'>
 <rfnnt = 'http://www.rfnnt.jahia.ep.europa.eu'>
 
-[rfnnt:epRfnFaq] > jnt:content, jmix:editorialContent, mix:title, rfnmix:epRfnBreadcrumbEnabled, rfnmix:epRfnComponent, rfnmix:epRfnMenuItem
+[rfnnt:epRfnFaq] > jnt:content, jmix:editorialContent, mix:title, rfnmix:epRfnBreadcrumbEnabled, rfnmix:epRfnComponent
  - filter (weakreference, choicelist[nodes='/sites/systemsite/categories/faq_filters//*;jnt:category']) multiple
  - description (string, richtext) mandatory internationalized
  - summary (string, richtext) mandatory internationalized
