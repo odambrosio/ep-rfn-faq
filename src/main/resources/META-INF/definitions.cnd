@@ -10,7 +10,7 @@
  - summary (string, richtext) mandatory internationalized
  - responsible1 (weakreference, picker[type='contact'])
  - responsible2 (weakreference, picker[type='contact'])
- + * (rfnnt:epRfnFormFile, rfnnt:epRfnFormUrl, rfnnt:epRfnMultimediaElement, rfnnt:epRfnReferenceDocumentFile, rfnnt:epRfnReferenceDocumentUrl, rfnnt:epRfnLink)
+ + * (rfnnt:epRfnMultimediaElement, rfnnt:epRfnInternationalizedFile, rfnnt:epRfnLink)
 
 [rfnnt:epRfnFaqSearchResults] > jnt:searchResults
 
